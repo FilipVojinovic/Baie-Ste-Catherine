@@ -1,0 +1,49 @@
+.joindre_hero{
+    background-image: url(../assets/images/hero__joindre.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 176.5px 0;
+
+    .contenu__hero{
+        width: 924px;
+
+        .logo{
+            p{
+                font-family: var(--font-primary);
+                color: var(--color-primary);
+                font-size: var(--font-size-titre);
+            }
+        }
+
+        h1{
+            color: var(--color-white);
+            font-family: var(--font-third);
+            font-weight: 500;
+
+            br{
+                display: none;
+
+                @media screen and (max-width: $breakpoint-md-sm) {
+                    display: block;
+                }
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    display: none;
+                }
+            }
+
+            .moitie{ 
+                display: none;
+
+                @media screen and (max-width: $breakpoint-sm-xs) {
+                    display: none;
+                }
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+}

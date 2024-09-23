@@ -1,0 +1,102 @@
+.hero {
+    /*background-image: url(../assets/images/hero1.png);
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    //padding: 290px 0;
+
+    .wrapper {
+        position: relative;
+
+        .contenu__hero {
+            position: absolute;
+            width: 727px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            z-index: 2;
+            height: 900px;
+            justify-content: center;
+            user-select: none;
+
+            .logo {
+
+                p {
+                    font-family: var(--font-primary);
+                    color: var(--color-white);
+                    font-size: var(--font-size-titre);
+                }
+            }
+
+            h1 {
+                color: var(--color-white);
+
+                br {
+                    display: none;
+
+                    @media screen and (max-width: $breakpoint-sm-xs) {
+                        display: none;
+                    }
+
+                    @media screen and (max-width: $breakpoint-xs) {
+                        display: block;
+                    }
+                }
+
+                .moitie {
+                    display: none;
+
+                    @media screen and (max-width: $breakpoint-sm-xs) {
+                        display: block;
+                    }
+
+                    @media screen and (max-width: $breakpoint-xs) {
+                        display: none;
+                    }
+                }
+            }
+
+            a {
+                color: var(--color-white);
+            }
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 23px;
+                padding: 28px 39px;
+                background-color: var(--color-primary-light);
+                border-radius: var(--spacing-sm);
+                width: fit-content;
+                font-weight: 700;
+                color: var(--color-white);
+                font-size: var(--font-size-button);
+                transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+                &:hover {
+                    background-color: var(--color-primary);
+                    text-decoration: none;
+                }
+
+                .fond_fleche {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 6px;
+                    background-color: var(--color-primary);
+                    height: 19px;
+                    width: 19px;
+                    border-radius: 100px;
+                    margin-left: 10px;
+
+                    .icon--xs {
+                        display: flex;
+                        justify-self: center;
+                        align-items: center;
+                        fill: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+}

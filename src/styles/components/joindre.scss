@@ -1,0 +1,102 @@
+.joindre{
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .deux_contenus{
+        display: flex;
+        gap: var(--spacing-md);
+
+        @media screen and (max-width: $breakpoint-lg-md) {
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .contenu_texte{
+            padding-left: 122px;
+            width: 702px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                padding: 0;
+            }
+
+            .titre{
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .contacts{
+                display: flex;
+                gap: 17px;
+                flex-direction: column;
+
+                .contact{
+                    display: flex;
+                    align-items: center;
+                    gap: var(--spacing-md);
+                    padding: 12px;
+
+                    @media screen and (max-width: $breakpoint-sm) {
+                        flex-direction: column;
+                        justify-content: left;
+                        align-items: start;
+                    }
+
+                    .icone{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 12px;
+                        background-color: var(--color-bg-primary);
+                        border-radius: 11px;
+                        width: 89px;
+                        height: 89px;
+
+                        svg{
+                            fill: var(--color-primary);
+                        }
+                    }
+                }
+            }
+
+            .icones{
+                display: flex;
+                gap: 15px;
+
+                .fond_social{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: var(--spacing-md);
+                    background-color: var(--color-joindre);
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 100px;
+                    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+                    &:hover{
+                        background-color: var(--color-primary-light);
+                    }
+
+                    a{
+                        display: flex;
+                        justify-self: center;
+                        align-items: center;
+                        fill: var(--color-black);
+                        transition: fill 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+                        &:hover{
+                            background-color: var(--color-primary-light);
+                            fill: var(--color-white);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

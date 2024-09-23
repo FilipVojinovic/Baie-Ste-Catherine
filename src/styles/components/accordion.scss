@@ -1,0 +1,81 @@
+.accordions{
+    background: var(--color-primary);
+    padding: 100px 0;
+    .wrapper{
+        .text{
+            text-align: center;
+            .titre{
+                font-family: var(--font-primary);
+                color: var(--color-white);
+                font-size: var(--font-size-titre);
+            }
+            h2{
+                color: var(--color-white);
+            }
+
+            padding-bottom: var(--spacing-xl);
+        }
+
+        .accordion{
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+            color: var(--color-black);
+
+            .accordion__container{
+                height: fit-content;
+
+                .accordion__header{
+                    background-color: var(--color-white);
+                    border: 1px solid var(--color-black);
+                    padding: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 8px;
+                    z-index: 2;
+                    position: relative;
+                    cursor: pointer;
+
+                    h4{
+                        pointer-events: none;
+                    }
+                }
+
+                .accordion__content{                
+                    transition: all 0.5s;
+                    background-color: var(--color-white);
+                    border: 1px solid var(--color-black);
+                    padding: 0 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    transform: translateY(-100%) scaleY(0%);
+                    border-radius: 0 0 8px 8px;
+                    
+                }
+                
+                .header__icons{
+                    transition: all 0.5s;
+                }
+
+                &.is-active{
+
+                    .accordion__header{
+                        border-radius: 8px 8px 0 0;
+                    }
+
+                    .accordion__content{
+                        transform: translateY(0%) scaleY(100%);
+                        padding: 30px;
+                    }
+
+                    .header__icons{
+                        transition: all 0.5s;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

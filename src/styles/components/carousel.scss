@@ -1,0 +1,86 @@
+/* ==========================================================================
+   carousel / component
+   ========================================================================== */
+.hero {
+    .swiper-pagination {
+        position: absolute !important;
+        padding-bottom: 37px;
+    }
+
+    .swiper-pagination-bullets {
+        display: flex;
+        justify-content: center;
+        position: static;
+        gap: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        --size: 20px;
+        background-color: var(--color-white);
+        border-radius: 100%;
+        height: var(--size);
+        margin: 0 5px;
+        transition: border 0.4s ease-out;
+        width: var(--size);
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        border-width: calc(var(--size, 20px) / 2);
+        background-color: var(--color-primary-light);
+    }
+
+    .swiper-hero {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        max-width: 100%;
+        width: 100%;
+
+        .swiper-slide {
+            width: 100% !important;
+            height: 900px;
+
+            img {
+                width: 100%;
+                height: inherit;
+                user-select: none;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.actualite {
+    .swiper {
+        max-width: 100%;
+        width: auto;
+        overflow: visible;
+
+        .swiper-slide {
+            width: fit-content;
+            height: 486px;
+            transition: opacity 0.4s ease-out;
+
+            @media screen and (max-width: $breakpoint-xs) {
+                height: 283px;
+            }
+
+            img {
+                display: block;
+                width: 467px;
+                height: 486px;
+                object-fit: cover;
+                border-radius: 30px 30px 0 0;
+
+
+                @media screen and (max-width: $breakpoint-xs) {
+                    width: 273px;
+                    height: 283px;
+                }
+            }
+        }
+    }
+}
